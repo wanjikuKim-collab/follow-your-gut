@@ -4,10 +4,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    fontFamily:{
+      'montserrat': ['Montserrat'],
+    },
     extend: {},
     colors:{
       green:{
-        dark: "#OA5247",
+        dark: "#0A5247",
         light:"#BFD202",
   },
 }   
