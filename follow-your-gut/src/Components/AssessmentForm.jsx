@@ -66,7 +66,7 @@ const AssessmentForm = () => {
                 rules={{required: false}}
                 render={({field})=>(
                   <FormElement
-                    label= "Height"
+                    label= "Weight"
                     type= "number"
                     placeholder="What is your height?"
                     fieldRef={field}

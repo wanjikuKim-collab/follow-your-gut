@@ -5,7 +5,7 @@ const FormElement = ({type, label, placeholder, fieldRef, hasError}) => {
     
     return (
     <div className='form-group mb-6'>
-        <label className='block text-green-dark underline text-sm mb-2'>{label}</label>
+        <label className='block text-left font-bold text-green-dark underline text-lg mb-2'>{label}</label>
         {type === 'textarea' ? (
             <textarea className={classes} rows= "5" placeholder= {placeholder} {...fieldRef}/>
         ):(
