@@ -47,7 +47,7 @@ const AssessmentForm = () => {
                     hasError={errors.name?.type === 'required'}/>
                 )}/>
 
-        <Controller
+        {/* <Controller
                 name='height'
                 control={control}
                 rules={{required: false}}
@@ -71,7 +71,7 @@ const AssessmentForm = () => {
                     placeholder="What is your height?"
                     fieldRef={field}
                     hasError={errors.name?.type === 'required'}/>
-                )}/>
+                )}/> */}
 
         <Controller
                 name='allergies'
