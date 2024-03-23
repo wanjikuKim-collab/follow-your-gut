@@ -1,7 +1,6 @@
 import React from 'react'
 import hero_image from '../Assets/hero.png'
 import CallToAction from './CallToAction'
-import Assessment from '../Pages/Assessment'
 
 const Hero = () => {
   return (
@@ -21,7 +20,6 @@ const Hero = () => {
             </div>
           </div>
       </div>
-      <Assessment/>      
     </section>
   )
 }

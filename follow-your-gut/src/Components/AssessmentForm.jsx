@@ -2,7 +2,7 @@ import React from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import FormElement from './FormElement'
 
-const AssessmentForm = () => {
+const AssessmentForm = ({onSubmit}) => {
   const {control, handleSubmit, formState: {errors}} = useForm({
     defaultValues:{
       age: 0,
@@ -16,7 +16,7 @@ const AssessmentForm = () => {
     }
   })
 
-  const onSubmit = data => console.log(data)
+  // const onSubmit = data => console.log(data)
 
   return (
     <div>

@@ -1,8 +1,9 @@
 import React from 'react'
 import assessment_img from '../Assets/assessment_form.png'
 import AssessmentForm from '../Components/AssessmentForm'
+import {GoogleGenerativeAI} from "@google/generative-ai"
 
-const Assessment = () => {
+const Assessment = ({onSubmit}) => {
   return (
     <div className='assessment my-10 h-full flex '>
         <div className='assessment_image_container flex flex-col text-left justify-between items-left px-6 pb-8 w-1/2 '>
@@ -10,7 +11,7 @@ const Assessment = () => {
             <img className='assessment_png ' src={assessment_img} alt='This shows a man dressing his slad'/>
         </div>
         <div className='assessment_form_container w-1/2'>
-          <AssessmentForm/>
+          <AssessmentForm onSubmit={onSubmit}/>
         </div>
         
     </div>
