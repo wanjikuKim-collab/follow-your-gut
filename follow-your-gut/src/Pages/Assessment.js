@@ -1,7 +1,6 @@
 import React from 'react'
 import assessment_img from '../Assets/assessment_form.png'
 import AssessmentForm from '../Components/AssessmentForm'
-import {GoogleGenerativeAI} from "@google/generative-ai"
 
 const Assessment = ({onSubmit}) => {
   return (
