@@ -1,7 +1,7 @@
 import React from 'react';
 
 function parseOutput({ aiResponse }) {
-  const sections = aiResponse.split('\n\n');zzz // Split by double line breaks
+  const sections = aiResponse.split('\n\n');// Split by double line breaks
 
   const parsedData = {
     mealPlan: [],
