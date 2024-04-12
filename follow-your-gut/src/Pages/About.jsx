@@ -1,5 +1,5 @@
 import React from "react";
-
+import mealplan from '../Assets/meal_plan.png'
 function About() {
   return (
     <div className="flex flex-row h-full align-center p-14 items-center justify-center">
@@ -17,10 +17,10 @@ function About() {
           recommendations to your specific needs and preferences.
         </p>
       </div>
-      <div className="w-1/2">
+      <div className="w-1/2 flex items-center">
         <img
-            className="border rounded-full"
-            src={}
+            className="px-10 object-cover rounded-lg flex justify-center size-full"
+            src={mealplan}
             alt="A meal plan"
           />
       </div>
