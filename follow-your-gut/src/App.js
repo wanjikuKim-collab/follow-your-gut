@@ -1,14 +1,11 @@
 import './App.css';
 import Home from './Pages/Home';
-import Assessment from './Pages/Assessment';
-import GeminiOutput from './Pages/GeminiOutput';
 import Navbar from './Layouts/Header/Navbar';
-import ContentCard from './Components/AboutContentCard';
-import nutritionist from './Assets/nutritionist.png'
 
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import Nutritionist from './Pages/Nutritionist';
 
 function App() {
    const [aiResponse, setAiResponse] = useState('');
@@ -32,16 +29,10 @@ function App() {
     <div className="App">
       <Navbar/>
       <hr/>
-        <Home/>
-        <Assessment onSubmit={onSubmit}/>
-        {/* <GeminiOutput aiResponse={aiResponse}/> */}
-        <ContentCard 
-        png_link = {nutritionist}
-        header = "Get started with one of our licensed nutritionists"
-        section_content = "FYG empowers Kenyans with personalized meal plans using local ingredients. We believe gut health starts with a diverse diet, and aim to unlock its potential for a healthier young local ingredients. We believe gut health starts with a diverse diet, and aim to unlock its potential for a healthier you!"
-        png_alt = "nutritionist"
-        flex_dir = "flex-row"
-        />
+      <Routes>
+        <Route path='/' element ={<Home onSubmit={onSubmit}/>}/>
+        <Route path='/nutritionist' element={<Nutritionist/>}/>        
+      </Routes>
     </div>
   );
 }
