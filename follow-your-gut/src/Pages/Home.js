@@ -4,6 +4,7 @@ import Assessment from './Assessment';
 import GeminiOutput from './GeminiOutput';
 import GetStarted from '../Components/GetStarted';
 import About from './About';
+import Features from './Features';
 
 const Home = ({onSubmit}) => {
   return (
@@ -12,6 +13,7 @@ const Home = ({onSubmit}) => {
         <Assessment onSubmit={onSubmit}/>
         {/* <GeminiOutput aiResponse={aiResponse}/> */}
         <GetStarted/>
+        <Features/>
         <About/>
     </div>
   )

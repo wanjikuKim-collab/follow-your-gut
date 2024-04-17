@@ -19,7 +19,7 @@ const Hero = () => {
               <span>Follow</span>
               <br /> Your Gut
             </h1>
-            <p className="hero_subtitle text-xl text-gray-600 text-left mb-6 md:tracking-wide md:text-2xl">
+            <p className="hero_subtitle text-xl text-slate-600 text-left mb-6 md:tracking-wide md:text-2xl">
               The gut is responsible for 70-80% of our immunity. Healing it is
               healing <span>YOU</span>.
             </p>
