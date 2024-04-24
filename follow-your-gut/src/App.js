@@ -6,6 +6,7 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 import { useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import Nutritionist from './Pages/Nutritionist';
+import Footer from './Layouts/Footer';
 
 function App() {
    const [aiResponse, setAiResponse] = useState('');
@@ -33,6 +34,7 @@ function App() {
         <Route path='/' element ={<Home onSubmit={onSubmit}/>}/>
         <Route path='/nutritionist' element={<Nutritionist/>}/>        
       </Routes>
+      <Footer/>
     </div>
   );
 }
