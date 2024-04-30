@@ -3,9 +3,9 @@ import ReviewCard from '../Components/ReviewCard'
 
 function Reviews() {
   return (
-    <div className='testimonials h-full text-center align-center p-14 items-center justify-center cursor-pointer'>
+    <div className='testimonials h-full text-center p-6  cursor-pointer'>
       <h1 className='testimonial_header text-5xl p-10 font-bold text-green-dark font-montserrat mb-4 pb-10'>Our track record</h1>
-      <div className='testimonials_container flex flex-row m- mx-auto gap-8 group'>
+      <div className='testimonials_container flex md:flex-row flex-col gap-8 group'>
         <ReviewCard 
           testimonial="FYG has been a game-changer for my health journey! I used to feel lost in a sea of generic advice, but FYG's AI tailors everything to my needs. The delicious Kenyan recipes with local ingredients are a bonus – I'm eating healthier and feeling more energized than ever!"
           author="Sarah M." 

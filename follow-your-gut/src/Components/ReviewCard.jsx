@@ -3,7 +3,7 @@ import { MdStarRate } from "react-icons/md";
 
 function ReviewCard({ testimonial, author, png }) {
   return (
-    <div className="testimonial_card relative w-96 rounded-xl px-8 pt-2 pb-20 bg-green-light mix-blend-luminosity group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500">
+    <div className="testimonial_card relative rounded-xl px-8 pt-2 pb-20 bg-green-light mix-blend-luminosity group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500">
       <i className="testimonail_card_icon flex text-green-dark text-3xl p-1">
         <MdStarRate /><MdStarRate /><MdStarRate /><MdStarRate /><MdStarRate />
       </i>

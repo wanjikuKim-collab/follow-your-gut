@@ -41,15 +41,15 @@ const Hero = () => {
             link="#assessment"
             text="Get My Meal Plans"
           />
-          <div className="md:w-[600px] md:h-[500px] w-full">
+          <div className=" h-[500px] w-full p-6">
             <img
-              className="hero-image md:px-2 object-cover flex justify-center size-full"
+              className="hero-image overflow-hidden object-cover rounded-lg flex justify-center size-full"
               src={hero_image}
               alt="This shows a wooden cutting board filled with a variety of colorful foods such as cured meats,cheeses, fruits, nuts and breads, typically served as an appetizer or snack"
             />
           </div>
         </div>
-      </div>
+      </div> 
     </section>
   );
 };
