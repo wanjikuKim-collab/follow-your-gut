@@ -4,8 +4,8 @@ function About() {
   return (
     <div className="flex md:flex-row flex-col h-full align-center p-6 items-center justify-center bg-green-light">
       <div className="md:w-1/2 flex flex-col text-left justify-between items-left px-6">
-        <h2 className="text-5xl font-bold text-green-dark font-montserrat mb-4 text-left pb-4">The FYG Approach to Wellness</h2>
-        <h3 className="text-3xl font-montserrat font-bold text-green-dark mb-4">Powered by AI for a Personalized Journey</h3>
+        <h2 className="md:text-5xl text-3xl font-bold text-green-dark font-montserrat mb-4 text-left pb-4">The FYG Approach to Wellness</h2>
+        <h3 className="md:text-3xl text-xl font-montserrat font-bold text-green-dark mb-4">Powered by AI for a Personalized Journey</h3>
         <p className="text-green-dark font-light text-xl leading-normal text-left px-2">
           Imagine a wellness companion that understands your individual needs and
           preferences. With FYG, that companion becomes a reality. Our AI
@@ -17,9 +17,9 @@ function About() {
           recommendations to your specific needs and preferences.
         </p>
       </div>
-      <div className="md:w-1/2 flex">
+      <div className="md:w-1/2 flex justify-center">
       <img
-        className="m-2 h-[700] w-[600] object-cover rounded-2xl flex justify-center"
+        className="m-2 object-cover rounded-2xl flex justify-center"
         src={mealplan}
         alt="A meal plan"
       />

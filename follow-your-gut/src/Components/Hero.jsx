@@ -41,7 +41,7 @@ const Hero = () => {
             link="#assessment"
             text="Get My Meal Plans"
           />
-          <div className=" h-[500px] w-full p-6">
+          <div className=" md:h-[500px] w-full p-6">
             <img
               className="hero-image overflow-hidden object-cover rounded-lg flex justify-center size-full"
               src={hero_image}
