@@ -11,12 +11,12 @@ const Home = ({onSubmit}) => {
   return (
     <div id='home'>
         <Hero/>
-        <Assessment onSubmit={onSubmit}/>
+        {/* <Assessment onSubmit={onSubmit}/> */}
         {/* <GeminiOutput aiResponse={aiResponse}/> */}
-        <GetStarted/>
+        {/* <GetStarted/>
         <Features/>
         <About/>
-        <Reviews/>
+        <Reviews/> */}
     </div>
   )
 }
