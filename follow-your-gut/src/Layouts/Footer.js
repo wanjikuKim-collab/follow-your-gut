@@ -1,5 +1,4 @@
 import React from 'react'
-import image from '../Assets/footer1.png'
 import Socials from '../Components/Socials'
 
 function Footer() {
@@ -68,8 +67,8 @@ function Footer() {
 
               <ul className="mt-6 space-y-4 text-sm">
                 {
-                  services.map(service => 
-                    <li>
+                  services.map((service, index) => 
+                    <li key={index}>
                       <a href="#" className="text-gray-700 transition hover:opacity-75"> {service} </a>
                     </li>)
                 }

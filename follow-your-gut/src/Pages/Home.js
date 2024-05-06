@@ -7,12 +7,12 @@ import About from './About';
 import Features from './Features';
 import Reviews from './Reviews'
 
-const Home = ({onSubmit}) => {
+const Home = ({onSubmit, history}) => {
   return (
     <div id='home'>
         <Hero/>
         <Assessment onSubmit={onSubmit}/>
-        {/* <GeminiOutput aiResponse={aiResponse}/> */}
+        <GeminiOutput aiResponse={history}/>
         <GetStarted/>
         <Features/>
         <About/>
