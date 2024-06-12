@@ -16,8 +16,7 @@ const AssessmentForm = ({onSubmit}) => {
     }
   })
 
-
-  return (
+   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Controller
