@@ -1,4 +1,7 @@
 /* Add this to your CSS file */
+.ai-response{
+    white-space: normal ;
+}
 .ai-response table {
     width: 100%;
     border-collapse: collapse;

@@ -4,7 +4,7 @@ import AssessmentForm from '../Components/AssessmentForm'
 
 const Assessment = ({onSubmit}) => {
   return (
-    <div className='assessment my-10 h-full flex flex-col md:flex-row' id='assessment'>
+    <div className='assessment mt-10 h-full flex flex-col md:flex-row' id='assessment'>
         <div className='assessment_image_container flex flex-col md:text-left justify-between px-6 pb-8 md:w-1/2 '>
             <h2 className='assessment_header text-3xl font-bold text-green-dark font-montserrat mb-4 md:text-5xl'>Assessment Form</h2>
             <img className='assessment_png block max-w-full rounded-lg' src={assessment_img} alt='This shows a man dressing his slad'/>

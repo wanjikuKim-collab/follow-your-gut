@@ -27,7 +27,7 @@ app.post('/gemini', async (req, res) => {
     Include breakfast, lunch, dinner, and snacks for each day of the week.
     Present the plan in a tabular format, with days of the week as columns and meals (breakfast, lunch, dinner, snacks) as rows.
     Additionally, generate a grocery list for the week based on the planned meals and provide links to relevant recipes for each dish.
-    Return the output in html form`;
+    Return the output in html form. Give me the macros of what I'm consuming`;
     
     try {
       const result = await model.generateContent(prompt);
@@ -35,7 +35,7 @@ app.post('/gemini', async (req, res) => {
       const text = response.text();
       console.log(text);
 
-      res.json(text);
+      res.send(text);
   } catch (error) {
       console.error('Error generating content:', error);
       res.status(500).send('An error occurred while generating the content.');
