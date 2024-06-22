@@ -122,7 +122,7 @@ const AssessmentForm = ({onSubmit}) => {
                     fieldRef={field}
                     hasError={errors.name?.type === 'required'}/>
                 )}/>
-                <button type='submit' className='w-1/2 bg-green-dark text-white text-lg font-bold py-2 my-6 px-4 rounded-xl shadow-md md:px-8 capitalize'>Submit</button>
+                <button type='submit' className='w-1/2 bg-green-dark text-white text-lg font-bold py-2 my-6 px-4 rounded-xl transition-all ease-in-out hover:translate-x-1 hover:scale-110 shadow-md md:px-8 capitalize hover:bg-lime-800 '>Submit</button>
       </form>
     </div>
   )

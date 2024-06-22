@@ -21,7 +21,12 @@ const CallToAction = ({
       capitalize
       text-center
       md:inline-block
-      hover:bg-green-700
+      translate
+      ease-in-out
+      hover:scale-110
+      hover:translate-x-1
+      hover:bg-lime-700
+      hover:text-white
       text-base
       md:text-lg
       my-2
