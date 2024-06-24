@@ -18,7 +18,8 @@
     "react-router-dom": "^6.22.3",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zod": "^3.23.8"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -46,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@hookform/resolvers": "^3.6.0",
     "@types/cors": "^2.8.17",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",

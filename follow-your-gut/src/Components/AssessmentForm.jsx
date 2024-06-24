@@ -1,6 +1,19 @@
 import React, { useState } from "react";
-import { Controller, useForm } from "react-hook-form";
-import FormElement from "./FormElement";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import {zodResolver} from "@hookform/resolvers/zod"
+
+// Define my zod schema
+const schema = z.object({
+  age: z.number().min(0, {message: "Age cannot be less than 0"}).max(99,{message: "Age cannot be more than 99"}),
+  gender: z.enum(["female", "male", "other"], {message: "Gender is required"}),
+  height: z.number().min(0, {message: "Height cannot be less than 0"}),
+  weight: z.number().min(0, {message: "Height cannot be less than 0"}),
+  allergies: z.string().optional(),
+  underlyingConditions: z.string().optional(),
+  dietaryRestrictions: z.string().optional(),
+  dietaryPreferences: z.string().optional(),
+})
 
 const AssessmentForm = ({ onSubmit }) => {
   const {
@@ -18,6 +31,7 @@ const AssessmentForm = ({ onSubmit }) => {
       dietaryRestrictions: "",
       dietaryPreferences: "",
     },
+    resolver: zodResolver(schema),
   });
 
   const [heightUnit, setHeightUnit] = useState("cm");
@@ -29,12 +43,7 @@ const AssessmentForm = ({ onSubmit }) => {
       <div>
         <label htmlFor="Age">Age</label>
         <input
-          {...register("age", {
-            required: "Age is required",
-            min: { value: 0, message: "Age cannot be less than 0" },
-            max: 99,
-            valueAsNumber: true,
-          })}
+          {...register("age", {valueAsNumber: true})}
           type="number"
           placeholder="What is your age?"
         />
@@ -43,7 +52,7 @@ const AssessmentForm = ({ onSubmit }) => {
       {/* ...gender... */}
       <div>
         <label htmlFor="Gender">Gender</label>
-        <select {...register("gender", { required: "Gender is required" })}>
+        <select {...register("gender")}>
           <option value="female">female</option>
           <option value="male">male</option>
           <option value="other">other</option>
@@ -57,10 +66,7 @@ const AssessmentForm = ({ onSubmit }) => {
         <label htmlFor="Height">Height</label>
         <div className="flex items-center">
           <input
-            {...register("height", {
-              required: "Height is required",
-              min: { value: 0, message: "Height cannot be less than 0" },
-            })}
+            {...register("height", {valueAsNumber: true})}
             type="number"
             placeholder="What is your height"
           />
@@ -81,10 +87,7 @@ const AssessmentForm = ({ onSubmit }) => {
         <label htmlFor="Weight">Weight</label>
         <div className="flex items-center">
           <input
-            {...register("weight", {
-              required: "Weight is required",
-              min: { value: 0, message: "Weight cannot be less than 0" },
-            })}
+            {...register("weight", {valueAsNumber: true})}
             type="number"
             placeholder="What is your weight"
           />
