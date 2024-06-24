@@ -38,6 +38,7 @@ const AssessmentForm = ({ onSubmit }) => {
           type="number"
           placeholder="What is your age?"
         />
+        {errors.age && <p className="text-red-500">{errors.age.message}</p>}
       </div>
       {/* ...gender... */}
       <div>
@@ -47,6 +48,7 @@ const AssessmentForm = ({ onSubmit }) => {
           <option value="male">male</option>
           <option value="other">other</option>
         </select>
+        {errors.gender && <p className="text-red-500">{errors.gender.message}</p>}
       </div>
       {/* ...height... */}
       <div>
@@ -68,11 +70,12 @@ const AssessmentForm = ({ onSubmit }) => {
             <option value="in">inches</option>
           </select>
         </div>
+        {errors.height && <p className="text-red-500">{errors.height.message}</p>}
       </div>
-      {/* ...weight... */}``
+      {/* ...weight... */}
       <div>
         <label htmlFor="Weight">Weight</label>
-        <div>
+        <div className="flex items-center">
           <input
             {...register("weight", {
               required: "Weight is required",
@@ -89,11 +92,16 @@ const AssessmentForm = ({ onSubmit }) => {
             <option value="lb">pounds</option>
           </select>
         </div>
+          {errors.wei && <p className="text-red-500">{errors.wei.message}</p>}
       </div>
       {/* ...allergies... */}
       <div>
         <label htmlFor="Allergies">Allergies</label>
-        <input type="text" placeholder="Do you have any allergies" />
+        <input
+          {...register("allergies")}
+          type="text"
+          placeholder="Do you have any allergies"
+        />
       </div>
       {/* ...underlying conditions... */}
       <div>
