@@ -33,9 +33,10 @@ function App() {
       .replace(/```html/g, "")
       .replace(/```/g, "")
       .replace(/Grocery List/, '<strong>Grocery List</strong>');
-      text = text.replace(/\s{2,}/g, ' ').trim();
+      text = text.replace(/\s{2,}/g, ' ').trim();// trim extra space
 
-    
+        // Update history with the cleaned text
+
       setHistory((oldTextHistory) => [...oldTextHistory, text]);
     // navigate("/output")
   }
