@@ -23,7 +23,7 @@ app.post("/gemini", async (req, res) => {
     Use the following information to guide the meal plan:${JSON.stringify(req.body.message)}.
     Include breakfast, lunch, dinner, and snacks for each day of the week.
     Present the plan in a tabular format, with days of the week as columns and meals (breakfast, lunch, dinner, snacks) as rows.
-    Additionally, generate a grocery list for the week based on the planned meals and provide links to relevant recipes for each dish.
+    Additionally, generate a grocery list for the week based on the planned meals.
     Return the output in html form. Give me the macros of what I'm consuming`;
 
   try {
