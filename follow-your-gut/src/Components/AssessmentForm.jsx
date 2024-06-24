@@ -6,7 +6,7 @@ const AssessmentForm = ({ onSubmit }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: {
       age: 0,
@@ -48,7 +48,9 @@ const AssessmentForm = ({ onSubmit }) => {
           <option value="male">male</option>
           <option value="other">other</option>
         </select>
-        {errors.gender && <p className="text-red-500">{errors.gender.message}</p>}
+        {errors.gender && (
+          <p className="text-red-500">{errors.gender.message}</p>
+        )}
       </div>
       {/* ...height... */}
       <div>
@@ -70,7 +72,9 @@ const AssessmentForm = ({ onSubmit }) => {
             <option value="in">inches</option>
           </select>
         </div>
-        {errors.height && <p className="text-red-500">{errors.height.message}</p>}
+        {errors.height && (
+          <p className="text-red-500">{errors.height.message}</p>
+        )}
       </div>
       {/* ...weight... */}
       <div>
@@ -92,7 +96,7 @@ const AssessmentForm = ({ onSubmit }) => {
             <option value="lb">pounds</option>
           </select>
         </div>
-          {errors.wei && <p className="text-red-500">{errors.wei.message}</p>}
+        {errors.wei && <p className="text-red-500">{errors.wei.message}</p>}
       </div>
       {/* ...allergies... */}
       <div>
@@ -116,7 +120,7 @@ const AssessmentForm = ({ onSubmit }) => {
       </div>
       {/* ...dietary Restrictions... */}
       <div>
-        <label htmlFor="dietaryRestrictions">"Dietary Restrictions"</label>
+        <label htmlFor="dietaryRestrictions">Dietary Restrictions</label>
         <input
           {...register("dietaryRestrictions")}
           type="text"
@@ -132,7 +136,9 @@ const AssessmentForm = ({ onSubmit }) => {
           placeholder="What food do you prefer?"
         />
       </div>
-      <button type="submit">Submit</button>
+      <button disabled={isSubmitting} type="submit">
+        {isSubmitting ? "Loading..." : "Submit"}
+      </button>
     </form>
 
     // <div>
