@@ -1,9 +1,8 @@
 import Home from "./Pages/Home";
 import Navbar from "./Layouts/Header/Navbar";
-import { GoogleGenerativeAI } from "@google/generative-ai";
 
 import { useState } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Nutritionist from "./Pages/Nutritionist";
 import Footer from "./Layouts/Footer";
 
@@ -11,7 +10,7 @@ function App() {
   //  const [aiResponse, setAiResponse] = useState('');
   const [history, setHistory] = useState([]);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   async function onSubmit(data) {
     const options = {

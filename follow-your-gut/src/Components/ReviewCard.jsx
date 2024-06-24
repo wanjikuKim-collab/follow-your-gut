@@ -12,7 +12,7 @@ function ReviewCard({ testimonial, author, png }) {
       </p>
       <div className="avatar absolute bottom-1 text-left mx-auto flex items-center">
         <img
-          className ="w-20 h-20 rounded-full"
+          className ="w-20 h-20 rounded-full object-cover"
           src={png}
           alt="user avatar"
           height="220"
